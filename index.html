@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kunjungan Industri — Bursa Efek Indonesia | Zidane Bryan Anggito Widagdo</title>
+  <meta name="description" content="Dokumentasi digital kunjungan industri ke Bursa Efek Indonesia (IDX Tower) dan Museum Bank Indonesia, 19 November 2026 — oleh Zidane Bryan Anggito Widagdo, XI RPL 1.">
+  <meta name="author" content="Zidane Bryan Anggito Widagdo">
+  <meta property="og:title" content="Kunjungan Industri — Bursa Efek Indonesia">
+  <meta property="og:description" content="Landing page, profil BEI, rangkaian kegiatan, galeri foto, vlog 3 menit, dan refleksi kunjungan industri.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/img/hero-bg.jpg">
+  <meta name="theme-color" content="#070b14">
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="progress-bar" id="progressBar" aria-hidden="true"></div>
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-wrap">
+      <a href="#beranda" class="brand" aria-label="Kembali ke beranda">
+        <svg class="brand-logo" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+          <rect x="1" y="1" width="30" height="30" rx="8" fill="none" stroke="currentColor" stroke-width="1.6"/>
+          <rect x="6.5" y="13" width="4" height="12" rx="1" fill="var(--gold)"/>
+          <rect x="14" y="7" width="4" height="18" rx="1" fill="var(--gold)"/>
+          <rect x="21.5" y="10" width="4" height="9" rx="1" fill="var(--gold)"/>
+          <line x1="8.5" y1="9" x2="8.5" y2="13" stroke="var(--gold)" stroke-width="1.6"/>
+          <line x1="23.5" y1="7" x2="23.5" y2="10" stroke="var(--gold)" stroke-width="1.6"/>
+        </svg>
+        <span class="brand-text">Kunjungan<strong>BEI</strong></span>
+      </a>
+      <nav class="nav-links" id="navLinks" aria-label="Navigasi utama">
+        <a href="#beranda">Beranda</a>
+        <a href="#profil">Profil BEI</a>
+        <a href="#kegiatan">Kegiatan</a>
+        <a href="#galeri">Galeri</a>
+        <a href="#vlog">Vlog</a>
+        <a href="#refleksi">Refleksi</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Buka menu navigasi" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ HERO / LANDING ============ -->
+    <section id="beranda" class="hero">
+      <canvas id="chartCanvas" aria-hidden="true"></canvas>
+      <div class="hero-vignette" aria-hidden="true"></div>
+      <div class="container hero-inner">
+        <span class="eyebrow reveal">Dokumentasi Digital &bull; Kunjungan Industri</span>
+        <h1 class="reveal">Menelusuri Jantung <span class="grad">Pasar&nbsp;Modal</span> Indonesia</h1>
+        <p class="lead reveal">Laporan perjalanan digital menuju Bursa Efek Indonesia — dari lobi IDX Tower yang berkilauan sampai lorong-lorong sejarah Museum Bank Indonesia.</p>
+        <div class="hero-cta reveal">
+          <a class="btn btn-primary" href="#vlog">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg>
+            Tonton Vlog
+          </a>
+          <a class="btn btn-ghost" href="#galeri">Lihat Galeri</a>
+        </div>
+        <div class="hero-meta reveal">
+          <span class="chip">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2v2H4a1 1 0 0 0-1 1v15a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1h-3V2h-2v2H9V2Zm13 8v10H4V10Z"/></svg>
+            Kamis, 19 November 2026
+          </span>
+          <span class="chip">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 14.5 9 2.5 2.5 0 0 1 12 11.5Z"/></svg>
+            IDX Tower &amp; Museum Bank Indonesia
+          </span>
+          <span class="chip chip-identity">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a4 4 0 1 1-4 4 4 4 0 0 1 4-4Zm0 6c-4.4 0-8 2.7-8 6v3a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-3c0-3.3-3.6-6-8-6Z"/></svg>
+            Zidane Bryan Anggito Widagdo &mdash; XI RPL 1
+          </span>
+        </div>
+      </div>
+      <div class="ticker" aria-hidden="true">
+        <div class="ticker-track" id="tickerTrack">
+          <span class="tk">Bursa Efek Indonesia beroperasi sejak 1 Desember 2007</span>
+          <span class="tk-up">&#9650;</span>
+          <span class="tk">Akar sejarah: <em>Vereniging voor de Effectenhandel</em>, Batavia 1912</span>
+          <span class="tk-up">&#9650;</span>
+          <span class="tk">IDX Tower &mdash; Jl. Jend. Sudirman Kav. 52-53, Jakarta</span>
+          <span class="tk-up">&#9650;</span>
+          <span class="tk">957 emiten tercatat (per Juli 2026)</span>
+          <span class="tk-up">&#9650;</span>
+          <span class="tk">Kapitalisasi pasar &plusmn; Rp 10.287 triliun</span>
+          <span class="tk-up">&#9650;</span>
+          <span class="tk">Sesi perdagangan: 09.00&ndash;12.00 &amp; 13.30&ndash;15.50 WIB</span>
+          <span class="tk-up">&#9650;</span>
+          <span class="tk">Indeks utama: IHSG &bull; LQ45 &bull; IDX30</span>
+          <span class="tk-up">&#9650;</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ STATISTIK ============ -->
+    <section class="stats" aria-label="Statistik singkat Bursa Efek Indonesia">
+      <div class="container stats-grid">
+        <div class="stat reveal">
+          <span class="stat-num"><span data-count="1912">0</span></span>
+          <span class="stat-label">Akar sejarah bursa di Batavia</span>
+        </div>
+        <div class="stat reveal">
+          <span class="stat-num"><span data-count="2007">0</span></span>
+          <span class="stat-label">BEI resmi beroperasi (merger BEJ &amp; BES)</span>
+        </div>
+        <div class="stat reveal">
+          <span class="stat-num"><span data-count="957">0</span>+</span>
+          <span class="stat-label">Emiten tercatat (per Juli 2026)</span>
+        </div>
+        <div class="stat reveal">
+          <span class="stat-num">Rp <span data-count="10287">0</span>&nbsp;T</span>
+          <span class="stat-label">Kapitalisasi pasar saham</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROFIL BEI ============ -->
+    <section id="profil" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Profil Bursa Efek Indonesia</span>
+          <h2>Rumah Besar <span class="grad">Saham Indonesia</span></h2>
+          <p>Bursa Efek Indonesia (BEI) atau <em>Indonesia Stock Exchange</em> (IDX) adalah bursa saham nasional yang menyatukan perusahaan pencari dana dengan investor pencari peluang tumbuh.</p>
+        </div>
+        <div class="profil-grid">
+          <div class="profil-text reveal">
+            <p><strong>BEI menjalankan tiga peran besar.</strong> Pertama, sebagai <em>fasilitator pendanaan</em>: perusahaan (emiten) menerbitkan saham dan sukuk di pasar modal untuk membiayai ekspansi. Kedua, sebagai <em>penyedia pasar yang tertib</em>: seluruh transaksi berjalan pada jam perdagangan resmi melalui sistem perdagangan elektronik yang diawasi ketat bersama Otoritas Jasa Keuangan (OJK). Ketiga, sebagai <em>motor edukasi</em>: program kunjungan industri seperti yang kami ikuti merupakan bagian dari upaya BEI menumbuhkan literasi pasar modal sejak pelajar.</p>
+            <p>Produk yang diperdagangkan sangat beragam &mdash; saham, obligasi negara dan korporasi, sukuk, ETF, hingga instrumen pendapatan tetap lain. Pergerakan seluruhnya dirangkum oleh indeks bursa, dengan <strong>IHSG (Indeks Harga Saham Gabungan)</strong> sebagai barometer utama, ditopang indeks turunan seperti LQ45 dan IDX30.</p>
+            <div class="badge-row" aria-label="Produk yang diperdagangkan di BEI">
+              <span class="badge">Saham</span>
+              <span class="badge">Sukuk</span>
+              <span class="badge">Obligasi</span>
+              <span class="badge">ETF</span>
+              <span class="badge">REITs</span>
+            </div>
+          </div>
+          <figure class="profil-figure reveal">
+            <img src="assets/img/profil-idx.jpg" alt="Logo Indonesia Stock Exchange di dinding metalik lobi IDX Tower" width="1400" height="700" loading="lazy">
+            <figcaption>Logo Indonesia Stock Exchange menyambut rombongan di lobi IDX Tower, Sudirman.</figcaption>
+          </figure>
+        </div>
+
+        <div class="timeline-wrap reveal">
+          <h3 class="timeline-title">Garis Waktu Sejarah Singkat</h3>
+          <ol class="timeline timeline-h">
+            <li class="tl-item">
+              <span class="tl-year">1912</span>
+              <span class="tl-dot" aria-hidden="true"></span>
+              <p>Bursa pertama Indonesia berdiri di Batavia: <em>Vereniging voor de Effectenhandel</em>.</p>
+            </li>
+            <li class="tl-item">
+              <span class="tl-year">1952</span>
+              <span class="tl-dot" aria-hidden="true"></span>
+              <p>Bursa Efek Jakarta dibuka kembali di era awal kemerdekaan.</p>
+            </li>
+            <li class="tl-item">
+              <span class="tl-year">1977</span>
+              <span class="tl-dot" aria-hidden="true"></span>
+              <p>Pasar modal diaktifkan kembali dan diawasi Bapepam; perdagangan mulai terlembaga.</p>
+            </li>
+            <li class="tl-item">
+              <span class="tl-year">1995</span>
+              <span class="tl-dot" aria-hidden="true"></span>
+              <p>Sistem perdagangan elektronik (JATS) menggantikan papan tulis manual.</p>
+            </li>
+            <li class="tl-item">
+              <span class="tl-year">2007</span>
+              <span class="tl-dot" aria-hidden="true"></span>
+              <p>Bursa Efek Jakarta dan Surabaya bergabung menjadi Bursa Efek Indonesia (1 Desember).</p>
+            </li>
+            <li class="tl-item">
+              <span class="tl-year">2008</span>
+              <span class="tl-dot" aria-hidden="true"></span>
+              <p>BEI diresmikan oleh Presiden Susilo Bambang Yudhoyono pada 10 Agustus.</p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ RANGKAIAN KEGIATAN ============ -->
+    <section id="kegiatan" class="section section-alt">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Rangkaian Kegiatan</span>
+          <h2>Satu Hari, <span class="grad">Dua Dunia</span></h2>
+          <p>Kunjungan kami menyeret dua sisi Jakarta yang saling melengkapi: kecanggihan IDX Tower di kawasan Sudirman, dan keanggunan Museum Bank Indonesia di kawasan Kota Tua.</p>
+        </div>
+        <div class="kegiatan-grid">
+          <ol class="timeline timeline-v">
+          <li class="tlv-item reveal">
+            <div class="tlv-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M4 16V6a1 1 0 0 1 1-1h9v11Zm10-8h4.2l2.8 3.5V16h-2.1a2.6 2.6 0 0 0-5.1 0H14ZM7.5 19.5A1.75 1.75 0 1 1 9.25 17.75 1.75 1.75 0 0 1 7.5 19.5Zm9.9 0a1.75 1.75 0 1 1 1.75-1.75 1.75 1.75 0 0 1-1.75 1.75Z"/></svg>
+            </div>
+            <div class="tlv-body">
+              <h3>Keberangkatan Rombongan</h3>
+              <span class="tlv-time">Pagi hari</span>
+              <p>Berangkat dari sekolah menggunakan bus bersama teman sekelas. Perjalanan dipenuhi pembagian tugas dokumentasi: siapa memotret, siapa merekam, siapa menyusun laporan.</p>
+            </div>
+          </li>
+          <li class="tlv-item reveal">
+            <div class="tlv-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M4 21V5l8-3v19h-4v-3H8v3Zm10 0V9l6 3v9Zm2-7h2v2h-2Zm0 4h2v2h-2Zm-9-9h2v2H7Zm0 4h2v2H7Z"/></svg>
+            </div>
+            <div class="tlv-body">
+              <h3>Tiba di IDX Tower, Sudirman</h3>
+              <span class="tlv-time">Pagi hari</span>
+              <p>Gedung kembar IDX berdiri gagah di kawasan SCBD. Rombongan masuk melalui canopi biru khas dan menikmati plaza luas dengan taman halus seperti taman Jepang.</p>
+            </div>
+          </li>
+          <li class="tlv-item reveal">
+            <div class="tlv-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M4 4h16v2H4Zm0 4h10v2H4Zm0 4h16v2H4Zm0 4h10v2H4Zm12-6 4 3-4 3Z"/></svg>
+            </div>
+            <div class="tlv-body">
+              <h3>Edukasi Pasar Modal di Lobi IDX</h3>
+              <span class="tlv-time">Pagi&ndash;Siang</span>
+              <p>Di lobi yang bermandikan lampu LED, kami menyaksikan layar perdagangan berdenyut: "di sinilah setiap hari, miliaran rupiah berpindah tangan." Petugas menjelaskan cara kerja bursa, perannya bagi perusahaan, dan mekanisme perdagangan elektronik.</p>
+            </div>
+          </li>
+          <li class="tlv-item reveal">
+            <div class="tlv-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M6 2h12v20l-3-2-3 2-3-2-3 2Zm3 5h6v2H9Zm0 4h6v2H9Z"/></svg>
+            </div>
+            <div class="tlv-body">
+              <h3>Galeri Sejarah &amp; Koleksi Bursa</h3>
+              <span class="tlv-time">Siang</span>
+              <p>Sertifikat saham antik era 1970-an (P.T. Semen Cibinong) terpajang di samping kisah bursa pertama 1912 di Batavia. Kami juga berhenti di dinding kutipan Warren Buffett dan mampir ke <em>IDX Gift Shop</em> yang penuh merchandise.</p>
+            </div>
+          </li>
+          <li class="tlv-item reveal">
+            <div class="tlv-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 2 2 8v2h20V8Zm-8 9v7h3v-7Zm6.5 0v7h3v-7ZM2 20h20v2H2Z"/></svg>
+            </div>
+            <div class="tlv-body">
+              <h3>Perpindahan ke Museum Bank Indonesia</h3>
+              <span class="tlv-time">Siang</span>
+              <p>Pesan terkirim: pasar modal tidak berdiri sendiri. Kepindahan ke Jalan Pintu Besar Utara, Kota Tua, menyambungkan cerita bursa dengan sejarah bank sentral yang mengakar sejak 1828 sebagai <em>De Javasche Bank</em>.</p>
+            </div>
+          </li>
+          <li class="tlv-item reveal">
+            <div class="tlv-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M11 3h2v6.2l5.4-3.1 1 1.7L14 11l5.4 3.2-1 1.7L13 12.8V21h-2v-8.2l-5.4 3.1-1-1.7L10 11 4.6 7.8l1-1.7L11 9.2Z"/></svg>
+            </div>
+            <div class="tlv-body">
+              <h3>Keliling Koleksi Museum</h3>
+              <span class="tlv-time">Sore</span>
+              <p>Tumpukan batang emas, uang kertas era awal kemerdekaan, klise cetak uang Rp5.000, diorama-diorama sejarah, sampai pameran rempah yang dulu menggerakkan ekonomi nusantara &mdash; semuanya hadir menyusuri halaman klasik museum.</p>
+            </div>
+          </li>
+          <li class="tlv-item reveal">
+            <div class="tlv-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 21s-8-5.2-8-11a4.6 4.6 0 0 1 8-3.1A4.6 4.6 0 0 1 20 10c0 5.8-8 11-8 11Z"/></svg>
+            </div>
+            <div class="tlv-body">
+              <h3>Penutup &amp; Terima Kasih</h3>
+              <span class="tlv-time">Sore</span>
+              <p>Kunjungan ditutup di depan maket gedung museum: ucapan terima kasih untuk sekolah dan guru pendamping, tepuk tangan meriah, dan dokumentasi terakhir sebelum bus membawa kami pulang.</p>
+            </div>
+          </li>
+        </ol>
+          <aside class="rute-card reveal" aria-label="Ringkasan rute kunjungan">
+            <h3>Rute Hari Itu</h3>
+            <p class="rute-sub">Kamis, 19 November 2026 &bull; dua lokasi, satu cerita</p>
+            <div class="rute-step">
+              <span class="rute-n">A</span>
+              <div><strong>IDX Tower, Sudirman</strong><span>Lobi, layar perdagangan, galeri sejarah bursa, gift shop</span></div>
+            </div>
+            <div class="rute-step">
+              <span class="rute-n">B</span>
+              <div><strong>Museum Bank Indonesia, Kota Tua</strong><span>Sejarah bank sentral 1828, emas, uang lama, diorama</span></div>
+            </div>
+            <div class="rute-step">
+              <span class="rute-n">C</span>
+              <div><strong>Bus kelas</strong><span>Dokumentasi perjalanan dan pembagian tugas laporan</span></div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ GALERI ============ -->
+    <section id="galeri" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Galeri Foto</span>
+          <h2>Bekal <span class="grad">Abadikan Setiap Sudut</span></h2>
+          <p>13 foto terbaik dari kamera pribadi selama kunjungan berlangsung. Klik foto untuk memperbesar, gunakan tombol panah kiri/kanan untuk berpindah.</p>
+        </div>
+        <div class="filter-bar reveal" role="tablist" aria-label="Filter galeri">
+          <button class="filter active" data-filter="semua" role="tab" aria-selected="true">Semua</button>
+          <button class="filter" data-filter="bei" role="tab" aria-selected="false">Bursa Efek Indonesia</button>
+          <button class="filter" data-filter="mbi" role="tab" aria-selected="false">Museum Bank Indonesia</button>
+        </div>
+        <div class="gallery-grid" id="galleryGrid">
+          <figure class="g-item reveal" data-cat="bei">
+            <img src="assets/img/gallery/idx-kutipan-buffett.jpg" alt="Kutipan Warren Buffett di dinding area edukasi IDX" loading="lazy" width="1600" height="900">
+            <figcaption><span class="g-tag">IDX</span>Kutipan Warren Buffett menyapa pengunjung area edukasi</figcaption>
+          </figure>
+          <figure class="g-item reveal" data-cat="bei">
+            <img src="assets/img/gallery/idx-aku-investor-saham.jpg" alt="Panel edukasi Aku Investor Saham" loading="lazy" width="900" height="1600">
+            <figcaption><span class="g-tag">IDX</span>Panel edukasi &quot;Aku Investor Saham&quot;</figcaption>
+          </figure>
+          <figure class="g-item reveal" data-cat="bei">
+            <img src="assets/img/gallery/idx-sertifikat-saham.jpg" alt="Sertifikat saham P.T. Semen Cibinong 1973 dalam etalase" loading="lazy" width="900" height="1600">
+            <figcaption><span class="g-tag">IDX</span>Sertifikat saham P.T. Semen Cibinong (1973) di etalase sejarah</figcaption>
+          </figure>
+          <figure class="g-item reveal" data-cat="mbi">
+            <img src="assets/img/gallery/mbi-panel-kebijakan.jpg" alt="Panel pengantar Museum Bank Indonesia" loading="lazy" width="1600" height="900">
+            <figcaption><span class="g-tag">Museum BI</span>Panel pengantar: &quot;Tempat segala kebijakan bermula&quot;</figcaption>
+          </figure>
+          <figure class="g-item reveal" data-cat="mbi">
+            <img src="assets/img/gallery/mbi-halaman-klasik.jpg" alt="Halaman tengah Museum Bank Indonesia bergaya klasik" loading="lazy" width="1600" height="900">
+            <figcaption><span class="g-tag">Museum BI</span>Halaman tengah museum bergaya kolonial klasik</figcaption>
+          </figure>
+          <figure class="g-item reveal" data-cat="mbi">
+            <img src="assets/img/gallery/mbi-diorama-prajurit.jpg" alt="Diorama prajurit menjaga kemerdekaan" loading="lazy" width="1600" height="900">
+            <figcaption><span class="g-tag">Museum BI</span>Diorama para prajurit menjaga kemerdekaan</figcaption>
+          </figure>
+          <figure class="g-item reveal" data-cat="mbi">
+            <img src="assets/img/gallery/mbi-panel-revolusi.jpg" alt="Panel Bank sebagai alat revolusi" loading="lazy" width="1600" height="900">
+            <figcaption><span class="g-tag">Museum BI</span>Panel &quot;Bank sebagai alat revolusi&quot;</figcaption>
+          </figure>
+          <figure class="g-item reveal" data-cat="mbi">
+            <img src="assets/img/gallery/mbi-diorama-rapat.jpg" alt="Diorama rapat tiga tokoh" loading="lazy" width="1600" height="900">
+            <figcaption><span class="g-tag">Museum BI</span>Diorama rapat era awal perbankan nasional</figcaption>
+          </figure>
+          <figure class="g-item reveal" data-cat="mbi">
+            <img src="assets/img/gallery/mbi-diorama-direksi.jpg" alt="Diorama rapat direksi lima tokoh" loading="lazy" width="1600" height="900">
+            <figcaption><span class="g-tag">Museum BI</span>Diorama rapat direksi era De Javasche Bank</figcaption>
+          </figure>
+          <figure class="g-item reveal" data-cat="mbi">
+            <img src="assets/img/gallery/mbi-diorama-perundingan.jpg" alt="Diorama perundingan tokoh era kemerdekaan" loading="lazy" width="1600" height="900">
+            <figcaption><span class="g-tag">Museum BI</span>Diorama perundingan tokoh-tokoh era kemerdekaan</figcaption>
+          </figure>
+          <figure class="g-item reveal" data-cat="mbi">
+            <img src="assets/img/gallery/mbi-diorama-kisah.jpg" alt="Diorama tokoh di latar pelabuhan" loading="lazy" width="900" height="1600">
+            <figcaption><span class="g-tag">Museum BI</span>Diorama kisah sejarah ekonomi nusantara</figcaption>
+          </figure>
+          <figure class="g-item reveal" data-cat="mbi">
+            <img src="assets/img/gallery/mbi-seragam.jpg" alt="Koleksi seragam bersejarah dalam etalase" loading="lazy" width="1600" height="900">
+            <figcaption><span class="g-tag">Museum BI</span>Koleksi seragam bersejarah dalam etalase kaca</figcaption>
+          </figure>
+          <figure class="g-item reveal" data-cat="mbi">
+            <img src="assets/img/gallery/mbi-sepeda-motor.jpg" alt="Sepeda motor tua dalam diorama pameran" loading="lazy" width="900" height="1600">
+            <figcaption><span class="g-tag">Museum BI</span>Sepeda motor tua dalam diorama pameran</figcaption>
+          </figure>
+        </div>
+      </div>
+      <!-- Lightbox -->
+      <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Pratinjau foto galeri" hidden>
+        <button class="lb-close" id="lbClose" aria-label="Tutup pratinjau">&times;</button>
+        <button class="lb-prev" id="lbPrev" aria-label="Foto sebelumnya">&#10094;</button>
+        <figure class="lb-stage">
+          <img id="lbImg" src="" alt="">
+          <figcaption id="lbCap"></figcaption>
+        </figure>
+        <button class="lb-next" id="lbNext" aria-label="Foto berikutnya">&#10095;</button>
+        <span class="lb-count" id="lbCount"></span>
+      </div>
+    </section>
+
+    <!-- ============ VLOG ============ -->
+    <section id="vlog" class="section section-alt">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Video Vlog</span>
+          <h2>Tonton <span class="grad">Perjalanan</span> Kami</h2>
+          <p>Vlog hasil dokumentasi pribadi: dari halte keberangkatan, gemerlap lobi IDX, sampai lorong-lorong Museum Bank Indonesia. Tekan putar dan nikmati perjalanan tiga menit.</p>
+        </div>
+        <div class="video-frame reveal">
+          <div class="video-head">
+            <span class="badge-live">VLOG RESMI</span>
+            <span class="video-title">Kunjungan Industri ke Bursa Efek Indonesia</span>
+            <span class="video-dur">02:56</span>
+          </div>
+          <div class="video-shell" id="videoShell">
+            <video id="vlogVideo" controls preload="metadata" poster="assets/img/poster-vlog.jpg" playsinline>
+              <source src="assets/video/vlog-kunjungan-bei.mp4" type="video/mp4">
+              Browser kamu belum mendukung pemutaran video HTML5. Silakan perbarui peramban.
+            </video>
+            <button class="video-overlay" id="videoOverlay" aria-label="Putar vlog">
+              <span class="play-pulse" aria-hidden="true"></span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg>
+            </button>
+          </div>
+          <div class="video-foot">
+            <span>Durasi 2 menit 56 detik &bull; direkam &amp; disunting sendiri</span>
+            <a class="dl-link" href="assets/video/vlog-kunjungan-bei.mp4" download>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v10.2l3.6-3.6L17 11l-5 5-5-5 1.4-1.4L12 13.2V3ZM5 19h14v2H5Z"/></svg>
+              Unduh video
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ KESIMPULAN & REFLEKSI ============ -->
+    <section id="refleksi" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Kesimpulan &amp; Refleksi</span>
+          <h2>Yang <span class="grad">Kami Bawa Pulang</span></h2>
+          <p>Lebih dari sekadar jalan-jalan, kunjungan ini menanamkan pemahaman nyata tentang pasar modal dan inspirasi tentang masa depan karier kami.</p>
+        </div>
+        <div class="cards-3">
+          <article class="card reveal">
+            <span class="card-num">01</span>
+            <h3>Pasar Modal Adalah Mesin Ekonomi</h3>
+            <p>BEI membuktikan diri sebagai jembatan dana: perusahaan memperoleh modal ekspansi, investor memperoleh peluang tumbuh. Layar perdagangan yang berdenyut setiap detik adalah wujud nyata dana publik yang bekerja.</p>
+          </article>
+          <article class="card reveal">
+            <span class="card-num">02</span>
+            <h3>Sejarah Menumbuhkan Keyakinan</h3>
+            <p>Dari sertifikat saham 1970-an sampai sistem elektronik modern, Indonesia telah berdagang saham lebih dari satu abad. Menyaksikan sisa-sisa sejarah itu langsung membuat materi pelajaran terasa hidup.</p>
+          </article>
+          <article class="card reveal">
+            <span class="card-num">03</span>
+            <h3>Literasi Sejak Dini Itu Wajib</h3>
+            <p>Panel "Aku Investor Saham" dan kutipan Buffett menyampaikan pesan yang sama: mulailah memahami investasi lebih awal, disiplin, dan berpandangan jangka panjang.</p>
+          </article>
+        </div>
+        <div class="refleksi-box reveal">
+          <span class="quote-mark" aria-hidden="true">&ldquo;</span>
+          <h3>Refleksi Pribadi</h3>
+          <p>Kalau ditanya bagian mana yang paling membekas, jawaban saya bukan layar bursa raksasa, melainkan diorama-diorama tenang di Museum Bank Indonesia. Di sana saya sadar bahwa sistem keuangan Indonesia tidak lahir dalam semalam &mdash; ia dibangun lapis demi lapis oleh orang-orang yang berani mengambil keputusan di masa sulit. Sebagai siswa RPL, saya melihat paralel yang jelas: sistem perdagangan elektronik yang mereka jalankan adalah karya perangkat lunak yang andal, aman, dan berjalan tanpa henti. Itu membuat saya semakin yakin bahwa kode yang saya tulis hari ini suatu saat bisa menjadi bagian dari infrastruktur yang digunakan jutaan orang. Kunjungan ini menutup satu pertanyaan dan membuka banyak yang baru &mdash; dan justru itu yang membuatnya berkesan.</p>
+          <div class="refleksi-sign">
+            <span class="sig-name">Zidane Bryan Anggito Widagdo</span>
+            <span class="sig-class">Kelas XI RPL 1</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-id">
+        <h3>Identitas Pembuat</h3>
+        <p class="id-name">Zidane Bryan Anggito Widagdo</p>
+        <p class="id-class">Kelas XI RPL 1</p>
+        <p class="id-task">Proyek Tugas: <strong>Digital Documentation of Industrial Visit &mdash; Bursa Efek Indonesia</strong></p>
+        <p class="id-date">Kunjungan: Kamis, 19 November 2026</p>
+      </div>
+      <div class="footer-nav">
+        <h3>Navigasi</h3>
+        <a href="#beranda">Beranda</a>
+        <a href="#profil">Profil BEI</a>
+        <a href="#kegiatan">Rangkaian Kegiatan</a>
+        <a href="#galeri">Galeri Foto</a>
+        <a href="#vlog">Video Vlog</a>
+        <a href="#refleksi">Kesimpulan &amp; Refleksi</a>
+      </div>
+      <div class="footer-info">
+        <h3>Tentang Proyek</h3>
+        <p>Seluruh foto dan video pada website ini adalah dokumentasi pribadi yang diambil langsung selama kunjungan industri berlangsung.</p>
+        <p class="tech">Dibangun dengan HTML, CSS &amp; JavaScript murni &mdash; tanpa framework.</p>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>&copy; <span id="year">2026</span> Zidane Bryan Anggito Widagdo &mdash; XI RPL 1</span>
+      <a href="#beranda">Kembali ke atas &uarr;</a>
+    </div>
+  </footer>
+
+  <button id="toTop" aria-label="Kembali ke atas" hidden>
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 6 7 7-1.4 1.4L13 9.8V20h-2V9.8l-4.6 4.6L5 13Z"/></svg>
+  </button>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
