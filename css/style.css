@@ -308,7 +308,7 @@ h1, h2, h3 { font-family: var(--font-head); line-height: 1.15; letter-spacing: -
   border: 1px solid var(--line);
   box-shadow: var(--shadow);
 }
-.profil-figure img { aspect-ratio: 2 / 1; object-fit: cover; width: 100%; }
+.profil-figure img { aspect-ratio: 2 / 1; object-fit: cover; width: 100%; height: auto; }
 .profil-figure figcaption {
   font-size: 0.82rem;
   color: var(--muted);
@@ -464,6 +464,7 @@ h1, h2, h3 { font-family: var(--font-head); line-height: 1.15; letter-spacing: -
 .g-item img {
   aspect-ratio: 4 / 3;
   width: 100%;
+  height: auto;
   object-fit: cover;
   transition: transform 0.55s ease;
 }
